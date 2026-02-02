@@ -1,23 +1,16 @@
-"""
-URL configuration for student_project project.
+from django.urls import path
+from . import views
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path,include
+urlpatterns=[
+    path('select/',views.register ,name='student_register'),
+    path('login/',views.student_login,name='student_login'),
+    path('dashboard/',views.student_dashboard,name='student_dashboard'),
+    path('admin/',views.admin_login,name='admin_login'),
+    path('adminn/',views.enter,name='enter'),
+    path('marks/',views.student_marks,name='marks'),
+    path('update',views.update_marks,name='update_marks'),
+    path('studentdashboard/', views.student_marks_dashboard, name='student_marks_dashboard'),
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('student/',include('student.urls')),
+   
+
 ]

@@ -1,0 +1,115 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("/static/images/background image.png") no-repeat center center;
+    background-size: cover;      
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-height: 100vh;        
+}
+
+
+header {
+    width: 100%;
+    height: 15vh;
+    padding: 5px 0;
+    background-color:#343535;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.register-box {
+    background: #ffffff; 
+    width: 250px;   
+    height: 70vh;    
+    max-width: 90%;     
+    padding: 5px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: rgb(182, 182, 113);
+    margin-top: 10vh;
+}
+
+.register-box h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    color: #333333;
+    font-size: 24px;
+}
+
+.register-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+    font-size: 14px;
+}
+
+.register-box input[type="text"],
+.register-box input[type="number"],
+.register-box input[type="email"],
+.register-box input[type="password"],
+.register-box input[type="date"],
+.register-box select {
+    width: 100%;
+    height:15px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 10px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background-color:azure;
+}
+
+.register-box input:focus,
+.register-box select:focus {
+    border-color: #4b6cb7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(75, 108, 183, 0.5);
+}
+
+.register-box .register-btn {
+    width: 50%;
+    height:7vh;
+    padding: 5px;
+    margin-left: 70px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.register-box .register-btn:hover {
+    background-color: #45a049;
+}
+
+.register-box .login-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #624a43;
+}
+
+.register-box .login-text a {
+    color: #4b6cb7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-box .login-text a:hover {
+    text-decoration: underline;
+}

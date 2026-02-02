@@ -1,0 +1,107 @@
+/* =================== RESET =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =================== BODY =================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;   /* default page background */
+}
+
+body.no-bg {
+    background: none !important;
+}
+
+
+/* =================== PAGE CONTAINER =================== */
+.marks-page {
+    padding-top: 20px; /* extra space so table starts below header */
+}
+
+/* =================== TABLE CONTAINER =================== */
+.table-container, .table-wrapper {
+    background-color: white;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 95%;
+    overflow-x: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 0px;
+}
+
+/* =================== TABLE =================== */
+.marks-table {
+    border-collapse: collapse;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Table Headings */
+.marks-table thead th {
+    background-color: #34495e;
+    color: white;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-weight: 600;
+    position: sticky;   /* keep headings visible */
+    top: 0;
+    z-index: 2;
+}
+
+/* Table Cells */
+.marks-table td {
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+/* First column (name) styling */
+.marks-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+/* =================== INPUTS =================== */
+.marks-table input {
+    width: 70px;
+    padding: 6px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* =================== BUTTON =================== */
+.update-btn {
+    padding: 6px 14px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.update-btn:hover {
+    background-color: #219150;
+}
+
+/* =================== RESPONSIVE =================== */
+@media screen and (max-width: 768px) {
+    .marks-table input {
+        width: 50px;
+        padding: 4px;
+    }
+
+    
+}
+
+/* =================== OPTIONAL: ALTERNATE ROW COLORS =================== */
+.marks-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

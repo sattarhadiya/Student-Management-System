@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+<main>
+    {% block main %}
+    {% endblock %}
+</main>
+
+</body>
+</html>

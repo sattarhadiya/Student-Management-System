@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}no-bg{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/marks.css' %}">
+{% endblock %}
+
+{% block main %}
+<div class="marks-page">
+
+    <h2 style="text-align: center; margin-bottom: 20px;">STUDENT MANAGEMENT SYSTEM</h2>
+
+    <!-- Table Wrapper -->
+    <div class="table-wrapper table-container">
+        <table class="marks-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>M1</th>
+                    <th>Physics</th>
+                    <th>Chemistry</th>
+                    <th>DBMS</th>
+                    <th>Python</th>
+                    <th>Total</th>
+                    <th>Result</th>
+                    <th>Attendance</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for student in students %}
+                <!-- Form for each row -->
+                <form method="post" action="{% url 'update_marks' %}">
+                    {% csrf_token %}
+                    <tr>
+                        <td class="name">{{ student.name }}</td>
+                        <td><input type="number" name="m1" value="{{ student.m1 }}" required></td>
+                        <td><input type="number" name="physics" value="{{ student.physics }}" required></td>
+                        <td><input type="number" name="chemistry" value="{{ student.chemistry }}" required></td>
+                        <td><input type="number" name="dbms" value="{{ student.dbms }}" required></td>
+                        <td><input type="number" name="python" value="{{ student.python }}" required></td>
+                        <td><input type="number" name="total" value="{{ student.total }}" required></td>
+                        <td><input type="text" name="result" value="{{ student.result }}" required></td>
+                        <td><input type="text" name="attendance" value="{{ student.attendance }}"></td>
+                        <td>
+                            <input type="hidden" name="student_rollno" value="{{ student.rollno }}">
+                            <button type="submit" class="update-btn">Update</button>
+                        </td>
+                    </tr>
+                </form>
+                {% empty %}
+                <tr>
+                    <td colspan="10" style="text-align: center;">No students found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}
